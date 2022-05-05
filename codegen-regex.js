@@ -28,7 +28,7 @@ Array(numSpecs)
     
   describe("regex-specification-1=${i}", () => {
     
-    const keywords = [${keywords.slice(0, max).join(',')}]
+    const keywords = [${keywords.slice(0, MAX_REGEX_LITERALS).join(',')}]
     it.each(keywords)("matches", (keyword) => {
       [${codePoints.join(",")}].forEach(p => expect(p).not.toMatch(keyword));
     })
