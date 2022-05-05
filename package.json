@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node ./codegen-regex.js && jest --runInBand --no-cache"
+    "test": "jest --runInBand --no-cache"
   },
   "keywords": [],
   "author": "",
