@@ -13,7 +13,7 @@ Array(numSpecs)
     const spec = `
   describe("some-evil-spec=${i}", () => {
     it("evil-block-${i}", () => {
-      window.evil_${i} = Array(1_000_000).fill(0).map((__, j) => j === 0 ? "spec-"+i : Math.random())
+      window.evil_${i} = Array(1_000_000).fill(0).map((__, j) => j === 0 ? "spec-${i}" : Math.random())
       expect(0).toEqual(0)
     });
   });

@@ -1,8 +1,0 @@
-
-  describe("some-evil-spec=151", () => {
-    it("evil-block-151", () => {
-      window.evil_151 = Array(1_000_000).fill(0).map((__, j) => Math.random())
-      expect(0).toEqual(0)
-    });
-  });
-  
