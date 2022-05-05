@@ -15,13 +15,13 @@ To reproduce this result locally, follow these steps:
 1. `npm run generate-test-cases`
 1. `npm run test-oom`
 
-This will produce a csv file, that monitors several interesting properties related to the javascript heap.
+This will produce a csv file that monitors several interesting properties related to the javascript heap and vm.
 
 Notice that this is due to stale native contexts not being garbage collected:
 
 <img src="./images/number-of-native-contexts.png">
 
-However, when compared to results of a process not run in band:
+However, when compared to results of a process not run in band the process exhibits expected behavior:
 
 1. `npx jest --testEnvironment=jsdom  --no-cache --testPathPattern=./tests-leak`
 
