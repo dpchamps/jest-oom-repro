@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "generate-test-cases": "node codegen && node codegen-regex",
-    "test-oom": "jest --runInBand --no-cache ./tests",
-    "test-regex-oom": "jest --runInBand --no-cache ./tests-regex"
+    "test-oom": "jest --runInBand --no-cache --testPathPattern=./tests",
+    "test-regex-oom": "jest --runInBand --no-cache --testPathPattern=./tests-regex"
   },
   "keywords": [],
   "author": "",
