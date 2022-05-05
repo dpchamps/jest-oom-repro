@@ -133,3 +133,5 @@ tests-leak/*
 !tests-leak/.gitkeep
 tests-regex/*
 !tests-regex/.gitkeep
+
+*.csv

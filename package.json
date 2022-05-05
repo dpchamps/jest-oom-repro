@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "generate-test-cases": "node codegen && node codegen-regex",
-    "test-oom": "jest --runInBand --no-cache --testPathPattern=./tests",
-    "test-regex-oom": "jest --runInBand --no-cache --testPathPattern=./tests-regex"
+    "test-oom": "jest --testEnvironment=jsdom --runInBand --no-cache --testPathPattern=./tests-leak",
+    "test-regex-oom": "jest --testEnvironment=jsdom --runInBand --no-cache --testPathPattern=./tests-regex"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jest": "^27.4.7"
+    "jest": "^28.0.3",
+    "jest-environment-jsdom": "^28.0.2"
   }
 }

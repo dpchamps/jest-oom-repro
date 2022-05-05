@@ -1,7 +1,7 @@
 const {createWriteStream} = require('fs');
 const vm = require('node:v8');
 module.exports = async () => {}
-const ws = createWriteStream(`${__dirname}/${process.version}-${String(Date.now()).substring(-5)}`);
+const ws = createWriteStream(`${__dirname}/${process.version}-${String(Date.now()).substring(-5)}.csv`);
 
 ws.write([
     'Total Heap Size',

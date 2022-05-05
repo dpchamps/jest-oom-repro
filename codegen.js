@@ -1,4 +1,4 @@
-const { NUM_SPECS = "1000", TMP_SPECS_DIR = "tests" } = process.env;
+const { NUM_SPECS = "1000", TMP_SPECS_DIR = "tests-leak" } = process.env;
 const fs = require("fs");
 const path = require("path");
 const numSpecs = parseInt(NUM_SPECS, 10);
