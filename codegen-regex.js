@@ -1,4 +1,4 @@
-const { NUM_SPECS = "1000", TMP_SPECS_DIR = "tests-regex" } = process.env;
+const { NUM_SPECS = "1000", TMP_SPECS_DIR = "tests-regex", MAX_REGEX_LITERALS = "10" } = process.env;
 const fs = require("fs");
 const path = require("path");
 const numSpecs = parseInt(NUM_SPECS, 10);
@@ -20,7 +20,7 @@ const constructLargeUnicodeDigitAndLetterRegex = (inputs) => inputs.map(input =>
 
 const keywords = constructLargeUnicodeDigitAndLetterRegex(permuteStringInput(input));
 const codePoints = Array(15).fill(100).map((x, i) => `"${String.fromCharCode("0x" + Number(x+i).toString().padStart(4, "0"))}"`)
-const MAX_REGEX_LITERALS = 20
+
 Array(numSpecs)
   .fill(0)
   .forEach((_, i) => {
@@ -28,7 +28,7 @@ Array(numSpecs)
     
   describe("regex-specification-1=${i}", () => {
     
-    const keywords = [${keywords.slice(0, MAX_REGEX_LITERALS).join(',')}]
+    const keywords = [${keywords.slice(0, Number(MAX_REGEX_LITERALS)).join(',\n')}]
     it.each(keywords)("matches", (keyword) => {
       [${codePoints.join(",")}].forEach(p => expect(p).not.toMatch(keyword));
     })
